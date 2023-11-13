@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.navlist li{
+    list-style: none;
+}
+
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.navlist li a::after , .navlist .active::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -0.1rem;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.left-container,.right-container{
+    height: 100vh;
+}
+
+.left-container{
+    background: #FA8072;
+    width: 70%;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right-container{
+    background:  linear-gradient(to right bottom, #FA8072  , #FFDEAD 90% ) ;
+    width: 30%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.fa-brands.fa-linkedin{
+    color: 	#00008B;
+    font-size: 2rem;
+}
+.fa-brands.fa-github{
+    color: #DCDCDC ;
+    font-size: 2rem;
+}
+.fa-brands.fa-instagram{
+    color: #DC143C;
+    font-size: 2rem;
+}
+.fa-brands.fa-facebook{
+    color: #191970;
+    font-size: 2rem;
+}
+
+
+.content .intro{
+    font-size: 1.5 rem;
+    color: #FFE4E1 ;
+    margin-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content .intro span{
+    color: 	 #fff;
+    margin-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content h1{
+    font-size: 3rem;
+    color: #FFDEAD;
+    margin-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content .details{
+    font-size: 1rem;
+    color: #fff;
+    max-width: 40rem;
+    margin: 1rem ;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-container button{
+    animation: buttonshake 2s infinite ease-in-out;
+}
+
+@keyframes buttonshake {
+    0%{
+        margin-top: 3rem;
+    }
+    50%{
+        margin-top: 1.5rem;
+    }
+    100%{
+        margin-top: 3rem;
+    }
+}
+
+.btn-container button{
+    border: 0.1rem solid  #FFDEAD;
+    font-size: 1.1rem;
+    padding-left:0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-left: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+button:nth-child(1){
+    background: #FFDEAD;
+}
+button:nth-child(2){
+    background: transparent;
+    color: #FFDEAD;
+    margin-left: 2rem;
+}
+button:nth-child(0):hover{
+    background: transparent;
+    color: #FFDEAD;
+}
+button:nth-child(1):hover{
+    background: transparent;
+    color: #FFDEAD;
+}
+button:nth-child(2):hover{
+    background: #FFDEAD;
+    color: black;
+}
+button:nth-child(3):hover{
+    background: transparent;
+    color: #FFDEAD;
+}
+button:nth-child(4):hover{
+    background: transparent;
+    color: #FFDEAD;
+}
+button:nth-child(5):hover{
+    background: transparent;
+    color: #FFDEAD;
+}
+button:nth-child(6):hover{
+    background: transparent;
+    color: #FFDEAD;
+}
+.icons a .fa-brands.fa-linkedin{
+    animation: iconrotate  2s ease-in-out infinite;
+}
+
+.icons a .fa-brands.fa-github{
+    animation: iconrotate  2s ease-in-out infinite;
+}
+
+.icons a .fa-brands.fa-instagram{
+    animation: iconrotate  2s ease-in-out infinite;
+}
+
+@keyframes iconrotate{
+    0%{
+        rotate: 30deg;
+    }
+    50%{
+        rotate: -30deg;
+    }
+    100%{
+        rotate: 30deg;
+    }
+}
+
+.icons .fa-brands.fa-linkedin:hover{
+    cursor: pointer;
+    background:linear-gradient(#fff , #00008B);
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent ;
+}
+
+.icons .fa-brands.fa-github:hover{
+    cursor: pointer;
+    background:linear-gradient(#fff , black );
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent ;
+}
+
+.icons .fa-brands.fa-instagram:hover{
+    cursor: pointer;
+    background:linear-gradient(#fff , #DC143C);
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent ;
+}
+
+.icons .fa-brands.fa-facebook:hover{
+    cursor: pointer;
+    background:linear-gradient(#fff , #191970);
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent ;
+}
+
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50% , -50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient( to right , #DC143C 50%, #FF0000 50%  )  ;
+    width: 26rem;
+    filter: blur(5rem);
+}
+.circle:nth-child(2){
+    background-image: url("./137184767-79a13ec7-1bb3-4341-a6da-3a149c9c159a.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    box-shadow: 0 0 0.5rem #fff ;
+}
+
+.skills{
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.skills button{
+    color:	#000000;
+    background-color: #FFE4B5;
+    width: 6rem;
+    margin-bottom: 1rem;
+}
+.skills-heading
+{
+    font-size: 2rem;
+    color: #FFDEAD;
+    margin-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
